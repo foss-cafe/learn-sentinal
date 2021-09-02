@@ -23,7 +23,7 @@ resource "aws_imagebuilder_component" "example" {
 resource "aws_imagebuilder_distribution_configuration" "example" {
   name = "example"
   distribution {
-    region = "us-east-1"
+    region = "ap-south-1"
     # ami_distribution_configuration {
     #   kms_key_id = "arn:aws:kms:ap-south-1:549942532493:key/f03fe8d0-8951-41eb-9f39-0ab438cd9002"
     #   ami_tags = {
@@ -34,5 +34,5 @@ resource "aws_imagebuilder_distribution_configuration" "example" {
     
   }
 
-  kms_key_id = "arn:aws:kms:ap-south-1:549942532493:key/f03fe8d0-8951-41eb-9f39-0ab438cd9002" 
+  # kms_key_id = "arn:aws:kms:ap-south-1:549942532493:key/f03fe8d0-8951-41eb-9f39-0ab438cd9002" 
 }
