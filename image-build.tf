@@ -20,18 +20,22 @@ resource "aws_imagebuilder_component" "example" {
 }
 
 
-resource "aws_imagebuilder_distribution_configuration" "this" {
-  name = "local-distribution"
+resource "aws_imagebuilder_distribution_configuration" "example" {
+  name = "example"
+
   distribution {
     ami_distribution_configuration {
-     ami_tags = {
-        Project = "IT"
+      ami_tags = {
+        CostCenter = "IT"
       }
-      name = "amzn-linux-{{ imagebuilder:buildDate }}"
+
+      name = "example-{{ imagebuilder:buildDate }}"
+
       launch_permission {
         user_ids = ["123456789012"]
       }
     }
-    region = "ap-south-1"
+
+    region = "us-east-1"
   }
 }
