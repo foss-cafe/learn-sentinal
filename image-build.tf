@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-east-1"
+}
 resource "aws_imagebuilder_component" "example" {
   name       = "example"
   platform   = "Linux"
